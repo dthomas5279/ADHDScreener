@@ -118,7 +118,8 @@ span{
       margin-left: auto;
       margin-right: auto;
       display: block;
-      width: 4em;
+      width: fit-content;
+      padding: 0.5rem 2em;
       padding: 0.5rem 0;
       border-radius:5%;
       font-size: 30px;
