@@ -61,6 +61,22 @@ h3{
 span{
      font-size: 25px;
 }
+
+#intro {
+     opacity: 0
+   }
+
+#intro *{
+     text-align: left;
+     font-size: 30px;
+     font-weight: 600;
+}
+
+#percent{
+     color: red;
+     font-weight: 700;
+     font-size: 35px;
+}
 .slider{
      -webkit-appearance: none;
      width: 100%;
@@ -120,7 +136,6 @@ span{
       display: block;
       width: fit-content;
       padding: 0.5rem 2em;
-      padding: 0.5rem 0;
       border-radius:5%;
       font-size: 30px;
      
@@ -137,6 +152,18 @@ span{
    .results{
      display: none;
    }
+   #showInstructions{
+        display: none;
+        margin: 0 auto;
+   }
+
+   button#showInstructions{
+        margin-top: 2rem;
+   }
+
+   #readInstructions{
+        text-align: center;
+   }
 
 h1{
      font-size: 4rem;
@@ -145,3 +172,7 @@ h1{
 #question{
      font-size: 2rem;
 }
+
+:focus {
+     border: solid 5px black;
+   }
