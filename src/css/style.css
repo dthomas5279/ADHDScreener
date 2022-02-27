@@ -156,6 +156,7 @@ span{
    #showInstructions{
         display: none;
         margin: 0 auto;
+        color: black;
    }
 
    button#showInstructions{
