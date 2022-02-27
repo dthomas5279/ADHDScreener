@@ -10,6 +10,7 @@ let globalsymptoms=[];
 slide()
 document.getElementById("start").addEventListener('click',start)
 document.getElementById("next").addEventListener('click',next)
+document.getElementById("previous").addEventListener('click',previous)
 document.getElementById("submit").addEventListener('click',submit)
 
 function slide(){
@@ -54,6 +55,10 @@ function start(){
 
     document.getElementById('question').innerHTML = questions[questionNumber - 1]
 
+    element = document.querySelector("#previous")
+
+element.classList.add("hidden");
+
 
     // let hide = document.getElementsByClassName('hidden')
     // let show = document.getElementsByClassName('home')
@@ -68,33 +73,83 @@ function start(){
 
 
 
-function next(){
+function previous(){
+
     let element = document.getElementById('questionNumber');
+    
     let value = element.innerHTML;
-
-
-    ++value;
-
+    
+    --value;
+    
     document.getElementById('questionNumber').innerHTML = value
+    
     document.getElementById('question').innerHTML = questions[value - 1]
-
-    if (value == 18){
-        document.querySelector('#next').classList.toggle('hidden')
-        document.querySelector('#submit').style.display = 'unset'
+    
+    if (value == 1){
+    
+    element = document.querySelector("#previous")
+    
+    element.classList.add("hidden");
+    
     }
-
+    
     let resultElement = document.getElementById("slideValue");
+    
     let resultValue= resultElement.innerHTML
-
+    
     results.push(resultValue)
-
+    
     document.getElementById('myRange').value = 1;
+    
     document.getElementById("slideValue").innerText = "1"
+    
     document.getElementById("labelValue").innerText=": Never"
     
+    }
     
+    function next(){
+    
+    let element = document.getElementById('questionNumber');
+    
+    let value = element.innerHTML;
+    
+    ++value;
+    
+    document.getElementById('questionNumber').innerHTML = value
+    
+    document.getElementById('question').innerHTML = questions[value - 1]
+    
+    if (value == 18){
+    
+    document.querySelector('#next').classList.toggle('hidden')
 
-} 
+    document.querySelector('#previous').classList.toggle('hidden')
+    
+    document.querySelector('#submit').style.display = 'block'
+    
+    }
+    
+    if (value == 2){
+    
+    element = document.querySelector("#previous")
+    
+    element.classList.remove("hidden");
+    
+    }
+    
+    let resultElement = document.getElementById("slideValue");
+    
+    let resultValue= resultElement.innerHTML
+    
+    results.push(resultValue)
+    
+    document.getElementById('myRange').value = 1;
+    
+    document.getElementById("slideValue").innerText = "1"
+    
+    document.getElementById("labelValue").innerText=": Never"
+    
+    }
 
 function submit(){
     document.querySelector('.results').style.display="unset"
