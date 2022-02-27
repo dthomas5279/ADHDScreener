@@ -1,60 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-  	<meta charset="utf-8">
-  	<meta name="description" content="Your description goes here">
-  	<meta name="keywords" content="one, two, three">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<title>ADHD Screener</title>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Adult ADHD Screener</title>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	
+
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
 
-		<h1> Adult ADHD Screener </h1>
+	</head>
+	<body class="container">
+		
+		<!--Change href below to URL-->
+		
+		<a href="home.html"><img class="Logo" src="https://i.imgur.com/RSafT5g.jpg" alt="80HD Logo">
+		</a>
+
+		<h1>Adult ADHD Screener</h1>
 
 		<section id="quiz">
 
-		<h3 id="questionNumber" class="hidden">0</h3>
-			<h2 class="hidden" id="question"> </h2>
+			<h3 id="questionNumber" class="hidden">0</h3>
+				<h2 class="hidden" id="question"> </h2>
+	
+				<h2 class="home"> Welcome please press "Start" </h2>
+	
+				
+				<div class="slidecontainer hidden">
+					<input type="range" min="1" max="5" value="1" class="slider" id="myRange">
+				  </div>
+	
+				<span class="hidden" id="slideValue">1</span>
+				<span id="labelValue" class="hidden">: Never</span>
+	
+	
 
-			<h2 class="home"> Welcome Please Press Start </h2>
-
+					<h3 id="start" class="home btn">Start</h3>
 			
 
-			<div class="slidecontainer hidden">
-				<input type="range" min="1" max="5" value="1" class="slider" id="myRange">
-			  </div>
+					<h3 id="next" class="hidden btn">Next</h3>
 
-			<span class="hidden" id="slideValue">1</span>
-			<span id="labelValue" class="hidden">: Never</span>
+					<h3 id="previous" class="hidden btn">Previous</h3>
 
+				
+					<h3 id="submit" class="btn">Submit</h3>
 
-			<h3 id="start" class="home">Start</h3>
-			<h3 id="next" class="hidden">Next</h3>
-			<h3 id="submit">Submit</h3>
+				</section>
 
-			</section>
+				<section class="results">
 
-			<section class="results">
+					
+						
 
-				<a class="btn_print"> Download PDF of Results </a>
+				<p> These results are not intended for diagnosis. They are to be used to facilitate a conversation between you and your healthcare provider.</p>
 
-			
-			<h2 id="resultTitle">Your Most Prevalent Symptoms: </h2>
-			<ul id="listResults"> </ul>
+				<p>Please use the space beneath each symptom to either write or type an example of how the symptom has shown in the past</p>
 
-			</section>
+				<a class="btn btn_print"> Download PDF of Results </a>
+				
+				
+				<h2 id="resultTitle">Your Most Prevalent Symptoms: </h2>
+				<ul id="listResults"> </ul>
+				</section>
+
+		<footer></footer>
 
 		<script type="text/javascript" src="js/main.js"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" ></script>
 
-
 	</body>
 </html>
+
+
+
