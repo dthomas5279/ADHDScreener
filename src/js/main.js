@@ -263,7 +263,7 @@ $(document).ready(function($)
 		
 					//credit : https://ekoopmans.github.io/html2pdf.js
 					
-					var element = document.querySelector('body'); 
+					var element = document.querySelector('.results'); 
 		
 					//easy
 					html2pdf().from(element).save();
