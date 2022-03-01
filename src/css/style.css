@@ -109,11 +109,15 @@ span{
 
    #listResults li{
         list-style: none;
-        font-size: 2rem;
-        padding-bottom: 12rem;
+        font-size: 1rem;
+        padding-bottom: 8rem;
    }
 
    .results p{
+        font-size: 2rem;
+   }
+
+   #resultTitle{
         font-size: 2rem;
    }
 

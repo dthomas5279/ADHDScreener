@@ -263,7 +263,7 @@ $(document).ready(function($)
 		
 					//credit : https://ekoopmans.github.io/html2pdf.js
 					
-					var element = document.querySelector('.results'); 
+					var element = document.querySelector('.symptoms'); 
 		
 					//easy
 					html2pdf().from(element).save();
