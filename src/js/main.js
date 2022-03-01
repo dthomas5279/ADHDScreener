@@ -275,7 +275,7 @@ $(document).ready(function($)
 					//more custom settings
 					var opt = 
 					{
-					  margin:       2,
+					  margin:       1,
 					  filename:     'pageContent_'+js.AutoCode()+'.pdf',
 					  image:        { type: 'jpeg', quality: 0.98 },
 					  html2canvas:  { scale: 2 },
