@@ -171,6 +171,10 @@ function submit(){
 
     document.querySelector("#quiz").style.display="none"
 
+    document.querySelector(".Logo").style.display="none"
+
+    document.querySelector("#showInstructions").style.display="none"
+
     for(let i=0; i< 17; i++){
         limit(i+1, results[i])
     }

@@ -116,7 +116,8 @@ span{
    }
 
    .results p{
-        font-size: 1rem;
+        font-size: 1.25rem;
+        text-align: center;
    }
 
    #resultTitle{
