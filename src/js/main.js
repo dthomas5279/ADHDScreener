@@ -1,11 +1,12 @@
+window.jsPDF = window.jspdf.jsPDF;
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 
-let results=[];
-let symptoms=[];
-let nonsymptoms=[];
-let globalsymptoms=[];
+var results=[];
+var symptoms=[];
+var nonsymptoms=[];
+var globalsymptoms=[];
 
 slide()
 document.getElementById("start").addEventListener('click',start)
@@ -13,6 +14,7 @@ document.getElementById("next").addEventListener('click',next)
 document.getElementById("previous").addEventListener('click',previous)
 document.getElementById("submit").addEventListener('click',submit)
 document.getElementById("showInstructions").addEventListener('click', instructions)
+document.getElementById("download").addEventListener('click', generatePDF)
 
 function slide(){
     document.getElementById("slideValue"); // Display the default slider value
@@ -175,29 +177,22 @@ function submit(){
 
     for(i=0; i < symptoms.length; i++){
 
-        if (i <3){
+        if (i <5){
             var ul = document.getElementById("page1")
         }
 
-        if (i>=3 && i < 6){
+        if (i>=5 && i < 10){
             var ul = document.getElementById("page2")
         }
 
-        if (i>=6 && i < 9){
+        if (i>=10 && i < 15){
             var ul = document.getElementById("page3")
         }
 
-        if (i>=9 && i < 12){
+        if (i>=15 && i < 18){
             var ul = document.getElementById("page4")
         }
 
-        if (i>=12 && i < 15){
-            var ul = document.getElementById("page5")
-        }
-
-        if (i>=15 && i < 18){
-            var ul = document.getElementById("page6")
-        }
         
 
         var li = document.createElement('li');
@@ -278,43 +273,43 @@ globalsymptoms=["Have trouble wrapping up the final details of a project, once t
 "Have difficulty waiting your turn in situations when turn taking is required",
 "Interrupt others when they are busy"]
 
-$(document).ready(function($) 
-			{ 
+// $(document).ready(function($) 
+// 			{ 
 		
-				$(document).on('click', '.btn_print', function(event) 
-				{
-					event.preventDefault();
+// 				$(document).on('click', '.btn_print', function(event) 
+// 				{
+// 					event.preventDefault();
 		
-					//credit : https://ekoopmans.github.io/html2pdf.js
+// 					//credit : https://ekoopmans.github.io/html2pdf.js
 					
-					var element = document.querySelector('.symptoms'); 
+// 					var element = document.querySelector('.symptoms'); 
 		
-					//easy
-					html2pdf().from(element).save();
+// 					//easy
+// 					html2pdf().from(element).save();
 		
-					//custom file name
-					//html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
+// 					//custom file name
+// 					//html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
 		
 		
-					//more custom settings
-					var opt = 
-					{
-					  margin:       1,
-					  filename:     'pageContent_'+js.AutoCode()+'.pdf',
-					  image:        { type: 'jpeg', quality: 0.98 },
-					  html2canvas:  { scale: 0.5 },
-					  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-					};
+// 					//more custom settings
+// 					var opt = 
+// 					{
+// 					  margin:       1,
+// 					  filename:     'pageContent_'+js.AutoCode()+'.pdf',
+// 					  image:        { type: 'jpeg', quality: 0.98 },
+// 					  html2canvas:  { scale: 0.5 },
+// 					  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+// 					};
 		
-					// New Promise-based usage:
-					// html2pdf().set(opt).from(element).save();
+// 					// New Promise-based usage:
+// 					// html2pdf().set(opt).from(element).save();
 		
 					 
-				});
+// 				});
 		
 		 
 		 
-			});
+// 			});
 
 
             var opacity = 0;
