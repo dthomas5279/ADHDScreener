@@ -126,7 +126,8 @@ span{
 /*******************************************/
 
 @media screen and (max-width: 800px) {
-     section {
+     #download {
+          display: none;
          
      }
  }
