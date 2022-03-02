@@ -277,33 +277,33 @@ globalsymptoms=["Have trouble wrapping up the final details of a project, once t
 "Have difficulty waiting your turn in situations when turn taking is required",
 "Interrupt others when they are busy"]
 
-// $(document).ready(function($) 
-// 			{ 
+ $(document).ready(function($) 
+ 			{ 
 		
-// 				$(document).on('click', '.btn_print', function(event) 
-// 				{
-// 					event.preventDefault();
+ 				$(document).on('click', '.btn_print', function(event) 
+				{
+ 					event.preventDefault();
 		
-// 					//credit : https://ekoopmans.github.io/html2pdf.js
+ 					//credit : https://ekoopmans.github.io/html2pdf.js
 					
-// 					var element = document.querySelector('.symptoms'); 
+					var element = document.querySelector('.symptoms'); 
 		
-// 					//easy
-// 					html2pdf().from(element).save();
+ 					//easy
+ 					html2pdf().from(element).save();
 		
 // 					//custom file name
 // 					//html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
 		
 		
 // 					//more custom settings
-// 					var opt = 
-// 					{
-// 					  margin:       1,
-// 					  filename:     'pageContent_'+js.AutoCode()+'.pdf',
-// 					  image:        { type: 'jpeg', quality: 0.98 },
-// 					  html2canvas:  { scale: 0.5 },
-// 					  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-// 					};
+ 					var opt = 
+ 					{
+ 					  margin:       1,
+ 					  filename:     'pageContent_'+js.AutoCode()+'.pdf',
+ 					  image:        { type: 'jpeg', quality: 0.98 },
+ 					  html2canvas:  { scale: 0.5 },
+ 					  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+					};
 		
 // 					// New Promise-based usage:
 // 					// html2pdf().set(opt).from(element).save();
