@@ -27,9 +27,9 @@ function generatePDF() {
 
 
     function calculatePDF_height_width(selector,index){
-		page_section = $(selector).eq(index);
-		HTML_Width = page_section.width();
-		HTML_Height = page_section.height();
+		page_section = document.getElementById('page1')
+		HTML_Width = page_section.offsetWidth;
+		HTML_Height = page_section.offsetHeight
 		top_left_margin = 1;
 		PDF_Width = HTML_Width + (top_left_margin * 2);
 		PDF_Height = (PDF_Width * 1.2) + (top_left_margin * 2);
