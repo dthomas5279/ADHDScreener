@@ -85,7 +85,7 @@ function generatePDF() {
 
             var imgData = canvas.toDataURL("image/png", 1.0);
             pdf.addPage();
-            pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin);
+            pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin, HTML_Width, HTML_Height);
 
             console.log(i)
              pdf.save("results.pdf");
@@ -115,7 +115,7 @@ function generatePDF() {
 
                 var imgData = canvas.toDataURL("image/png", 1.0);
                 pdf.addPage();
-                pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin);
+                pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin, HTML_Width, HTML_Height);
     
                 console.log(i)
                  pdf.save("results.pdf");
@@ -155,7 +155,7 @@ function generatePDF() {
 
         var imgData = canvas.toDataURL("image/png", 1.0);
         pdf.addPage();
-        pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin);
+        pdf.addImage(imgData, 'JPEG', top_left_margin, top_left_margin, HTML_Width, HTML_Height);
 
         console.log(i)  
          pdf.save("results.pdf");
