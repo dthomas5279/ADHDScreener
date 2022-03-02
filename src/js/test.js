@@ -30,7 +30,7 @@ function generatePDF() {
 		page_section = $(selector).eq(index);
 		HTML_Width = page_section.width();
 		HTML_Height = page_section.height();
-		top_left_margin = 15;
+		top_left_margin = 1;
 		PDF_Width = HTML_Width + (top_left_margin * 2);
 		PDF_Height = (PDF_Width * 1.2) + (top_left_margin * 2);
 		canvas_image_width = HTML_Width;
