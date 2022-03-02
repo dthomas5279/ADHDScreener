@@ -27,7 +27,7 @@ function generatePDF() {
 
 
     function calculatePDF_height_width(selector,index){
-		page_section = document.getElementById('page1')
+		page_section = screen.height
 		HTML_Width = page_section.offsetWidth;
 		HTML_Height = page_section.offsetHeight
 		top_left_margin = 1;

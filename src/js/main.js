@@ -14,7 +14,7 @@ document.getElementById("next").addEventListener('click',next)
 document.getElementById("previous").addEventListener('click',previous)
 document.getElementById("submit").addEventListener('click',submit)
 document.getElementById("showInstructions").addEventListener('click', instructions)
-document.getElementById("download").addEventListener('click', generatePDF)
+// document.getElementById("download").addEventListener('click', generatePDF)
 
 function slide(){
     document.getElementById("slideValue"); // Display the default slider value
