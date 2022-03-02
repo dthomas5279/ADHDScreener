@@ -111,20 +111,15 @@ span{
         list-style: none;
         font-size: 1rem;
         padding-bottom: 8rem;
-        width: 100%;
-        height: fit-content;
    }
 
    .results p{
-        font-size: 1.25rem;
-        text-align: center;
+        font-size: 2rem;
    }
 
    #resultTitle{
-        font-size: 1.5rem;
+        font-size: 2rem;
    }
-
-
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -132,9 +127,7 @@ span{
 
 @media screen and (max-width: 800px) {
      section {
-            #download{
-        display: none;
-   }
+         
      }
  }
 
