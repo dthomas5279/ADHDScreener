@@ -174,7 +174,31 @@ function submit(){
     }
 
     for(i=0; i < symptoms.length; i++){
-        var ul = document.getElementById("listResults")
+
+        if (i <3){
+            var ul = document.getElementById("page1")
+        }
+
+        if (i>=3 && i < 6){
+            var ul = document.getElementById("page2")
+        }
+
+        if (i>=6 && i < 9){
+            var ul = document.getElementById("page3")
+        }
+
+        if (i>=9 && i < 12){
+            var ul = document.getElementById("page4")
+        }
+
+        if (i>=12 && i < 15){
+            var ul = document.getElementById("page5")
+        }
+
+        if (i>=15 && i < 18){
+            var ul = document.getElementById("page6")
+        }
+        
 
         var li = document.createElement('li');
         let textNode= document.createTextNode(symptoms[i])

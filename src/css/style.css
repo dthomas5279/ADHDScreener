@@ -107,7 +107,7 @@ span{
      cursor: pointer;
    }
 
-   #listResults li{
+   .listResults li{
         list-style: none;
         font-size: 1rem;
         padding-bottom: 8rem;
