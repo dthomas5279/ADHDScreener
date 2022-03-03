@@ -126,10 +126,7 @@ span{
 /*******************************************/
 
 @media screen and (max-width: 800px) {
-     #download {
-          display: none;
-         
-     }
+    
  }
 
  .btn{
