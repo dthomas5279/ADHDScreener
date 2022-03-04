@@ -287,7 +287,7 @@ $(document).ready(function($)
 		
 					//credit : https://ekoopmans.github.io/html2pdf.js
 					
-					var element = document.querySelector('.symptoms'); 
+					var element = document.querySelector('#symptomPDF'); 
 		
 					//easy
 					//html2pdf().from(element).save();
@@ -299,10 +299,10 @@ $(document).ready(function($)
 					//more custom settings
 					var opt = 
 					{
-					  margin:       1,
+					  margin:       0.5,
 					  filename:     'results.pdf',
 					  image:        { type: 'jpeg', quality: 0.98 },
-					  html2canvas:  { scale: 0.5 },
+					  html2canvas:  { scale: 1 },
 					  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 					};
 		
