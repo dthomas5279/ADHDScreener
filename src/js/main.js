@@ -290,7 +290,7 @@ $(document).ready(function($)
 					var element = document.querySelector('.symptoms'); 
 		
 					//easy
-					html2pdf().from(element).save();
+					//html2pdf().from(element).save();
 		
 					//custom file name
 					//html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
@@ -300,14 +300,14 @@ $(document).ready(function($)
 					var opt = 
 					{
 					  margin:       1,
-					  filename:     'pageContent_'+js.AutoCode()+'.pdf',
+					  filename:     'results.pdf',
 					  image:        { type: 'jpeg', quality: 0.98 },
 					  html2canvas:  { scale: 0.5 },
 					  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 					};
 		
 					// New Promise-based usage:
-					// html2pdf().set(opt).from(element).save();
+					html2pdf().set(opt).from(element).save();
 		
 					 
 				});
