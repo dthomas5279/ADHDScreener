@@ -1,11 +1,12 @@
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+//define variables that will need to be reused
+var slider = document.getElementById("myRange"); //slider form symptom scale
+var output = document.getElementById("demo"); 
 
-let results=[];
-let symptoms=[];
-let nonsymptoms=[];
-let globalsymptoms=[];
+let results=[]; //array to store quiz results
+let symptoms=[]; //array to store questions the user appears symptomatic for
+let nonsymptoms=[]; //array to store questions the user did not appear symptomatic for
+let globalsymptoms=[]; //array with possible symptoms that each questions addresses
 
 slide()
 document.getElementById("start").addEventListener('click',start)
@@ -43,6 +44,7 @@ function slide(){
 
 }
 
+//When the start button is pressed, hide all the introduction text and display first quiz question, quiz instructions button, display slider
 function start(){
     var questionNumber = 1
     document.getElementById("questionNumber").innerText = questionNumber;
@@ -70,20 +72,10 @@ element.classList.add("hidden");
 
 document.getElementById('readInstructions').classList.toggle('hidden');
 
-
-    // let hide = document.getElementsByClassName('hidden')
-    // let show = document.getElementsByClassName('home')
-
-    // hide.classList.toggle('hidden')
-    // show.classList.toggle('hidden')
-
-    // for (var i = 0; i < obj.length; i++) {
-    //     document.getElementsByClassName([obj[i]]).style.display = 'none';
-    //   }
 }
 
 
-
+//When previous button is clicked move back to previous question
 function previous(){
 
     let element = document.getElementById('questionNumber');
@@ -112,6 +104,7 @@ function previous(){
     
     }
     
+//When next button is clicked store slider value in the results array, move to next question and reset slider value to 1
     function next(){
 
     let resultElement = document.getElementById("slideValue");
@@ -164,6 +157,8 @@ function previous(){
     
     }
 
+//When submit button is clicked use the limit function to check every value gathered in the resuolts array to see what questions the user appears symptomatic for
+//Use loop to print out results three to a page at a time 
 function submit(){
     document.querySelector('.results').style.display="unset"
 
@@ -213,6 +208,8 @@ function submit(){
 
 }
 
+//This function tests to see if the question reaches the threshold to be considered symptomatic 
+
 function limit(qNumber, testvalue){
     let temp;
     if (qNumber<=3 || qNumber == 12 || qNumber == 16 || qNumber == 18){
@@ -238,9 +235,12 @@ function limit(qNumber, testvalue){
     }
 }
 
+//When the instructions button is clicked it hides or shows the instructions
 function instructions(){
     document.getElementById('readInstructions').classList.toggle('hidden');
 }
+
+//All questions for the quiz being stored in an array
 
 let questions = [". How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?",
 ". How often do you have difficulty getting things in order when you have to do a task that requires organization?",
@@ -260,6 +260,7 @@ let questions = [". How often do you have trouble wrapping up the final details 
 ". How often do you have difficulty waiting your turn in situations when turn taking is required?",
 ". How often do you interrupt others when they are busy?",]
 
+//All possible corresponding symptoms stored in an array
 globalsymptoms=["Have trouble wrapping up the final details of a project, once the challenging parts have been done",
 "Have difficulty getting things in order when you have to do a task that requires organization",
 "Have problems remembering appointments or obligations",
@@ -278,6 +279,7 @@ globalsymptoms=["Have trouble wrapping up the final details of a project, once t
 "Have difficulty waiting your turn in situations when turn taking is required",
 "Interrupt others when they are busy"]
 
+//Call to html2pdf service to print document to pdf when the print to pdf button is clicked
 $(document).ready(function($) 
 			{ 
 		
